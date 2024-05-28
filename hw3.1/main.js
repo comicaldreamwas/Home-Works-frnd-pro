@@ -1,0 +1,21 @@
+let number = 42; 
+let string = "Hello, World!";
+let boolean = true; 
+let undefine ;
+let nullType = null; 
+let object = { key: "value" };
+let array = [1, 2, 3];  
+let functionType = function() {}; 
+let symbol = Symbol("symbol"); 
+let bigInt = 1234567890123456789012345678901234567890n; 
+
+console.log(number, typeof number);
+console.log(boolean, typeof boolean);
+console.log(undefine, typeof undefine);
+console.log(nullType, typeof nullType);
+console.log(object, typeof object);
+console.log(array, typeof array);
+console.log(functionType, typeof functionType);
+console.log(symbol, typeof symbol);
+console.log(string, typeof string);
+console.log(bigInt, typeof bigInt);
