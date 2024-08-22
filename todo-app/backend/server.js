@@ -6,14 +6,14 @@ const todosRouter = require('./routes/todos');
 const app = express();
 const PORT = 5000;
 
-// Middleware
+
 app.use(cors());
 app.use(express.json());
 
-// Routes
+
 app.use('/api/todos', todosRouter);
 
-// MongoDB connection
+
 mongoose.connect('mongodb://127.0.0.1:27017/todoapi', {
     useNewUrlParser: true,
     useUnifiedTopology: true
