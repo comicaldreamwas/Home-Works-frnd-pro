@@ -1,0 +1,42 @@
+.App {
+  text-align: center;
+}
+
+.emoji-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.emoji-item {
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.count {
+  font-size: 1.2rem;
+}
+
+.show-results-btn,
+.clear-results-btn {
+  margin: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.winner {
+  margin: 20px;
+}
+
+.winner-emoji {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
