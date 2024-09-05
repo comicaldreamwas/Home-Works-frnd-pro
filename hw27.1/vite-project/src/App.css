@@ -1,0 +1,32 @@
+
+
+body{
+  align-items: center;
+}
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: lightgray;
+  padding: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+nav a {
+  margin-right: 15px;
+  text-decoration: none;
+  color: inherit;
+}
