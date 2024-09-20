@@ -1,0 +1,28 @@
+.todo-form {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  width: 80%;
+  padding: 10px;
+}
+
+.todo-button {
+  padding: 10px 20px;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.clear-button {
+  margin-top: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+}
