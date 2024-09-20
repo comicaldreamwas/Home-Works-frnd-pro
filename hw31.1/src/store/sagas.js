@@ -1,7 +1,7 @@
 import { takeEvery, put, call } from 'redux-saga/effects';
 import { FETCH_TODOS, setTodos } from './actions';
 
-// Емуляція API для завантаження завдань
+
 function fetchTodosFromAPI() {
   return new Promise((resolve) => {
     setTimeout(() => {
