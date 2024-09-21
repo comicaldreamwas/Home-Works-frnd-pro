@@ -1,35 +1,32 @@
-import React from 'react';
+// components/TodoList.js
+
+import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { deleteTodo, markComplete, editTodo } from '../store/actions';
+import { loadTodosRequest, clearTodosRequest } from '../actions/todoActions';
+import TodoItem from './TodoItem';
+
 
 const TodoList = () => {
-  const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
+  const todos = useSelector((state) => state.todos);
+
+  useEffect(() => {
+    dispatch(loadTodosRequest());
+  }, [dispatch]);
+
+  const handleClearTodos = () => {
+    dispatch(clearTodosRequest());
+  };
 
   return (
-    <ul>
-      {todos.map((todo) => (
-        <li key={todo.id}>
-          <span
-            style={{
-              textDecoration: todo.completed ? 'line-through' : 'none',
-            }}
-            onClick={() => dispatch(markComplete(todo.id))}
-          >
-            {todo.task}
-          </span>
-          <button onClick={() => dispatch(deleteTodo(todo.id))}>Видалити</button>
-          <button
-            onClick={() => {
-              const newTask = prompt('Редагувати завдання:', todo.task);
-              if (newTask) dispatch(editTodo(todo.id, newTask));
-            }}
-          >
-            Редагувати
-          </button>
-        </li>
-      ))}
-    </ul>
+    <div>
+      <ul>
+        {todos.map((todo) => (
+          <TodoItem key={todo.id} todo={todo} />
+        ))}
+      </ul>
+      {todos.length > 0 && <button onClick={handleClearTodos}>Очистити всі завдання</button>}
+    </div>
   );
 };
 
