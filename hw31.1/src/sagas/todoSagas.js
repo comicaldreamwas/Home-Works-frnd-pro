@@ -1,15 +1,15 @@
-// sagas/todoSagas.js
+
 
 import { takeEvery, put } from 'redux-saga/effects';
 
 function* loadTodos() {
-  // Імітуємо завантаження з сервера
-  const todos = []; // Початково порожній список
+  
+  const todos = []; 
   yield put({ type: 'LOAD_TODOS_SUCCESS', payload: todos });
 }
 
 function* addTodoSaga(action) {
-  // Імітуємо додавання на сервері, додаємо ID
+  
   const newTodo = { ...action.payload, id: Date.now() };
   yield put({ type: 'ADD_TODO_SUCCESS', payload: newTodo });
 }

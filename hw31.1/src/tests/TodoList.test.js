@@ -1,4 +1,3 @@
-// tests/TodoList.test.js
 
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
@@ -39,13 +38,13 @@ test('позначення завдання як виконане після н�
  
    const todoItem = screen.getByText(/Тестове завдання/i);
  
-   // Перевіряємо, що завдання не закреслене
+   
    expect(todoItem).not.toHaveStyle('text-decoration: line-through');
  
-   // Натискаємо на завдання
+   
    fireEvent.click(todoItem);
  
-   // Перевіряємо, що завдання закреслене
+   
    expect(todoItem).toHaveStyle('text-decoration: line-through');
  });
  
